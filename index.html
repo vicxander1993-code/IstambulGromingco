@@ -102,48 +102,28 @@
 </head>
 <body>
 
-    <nav class="fixed top-0 w-full z-50 nav-glass px-4 py-3">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div onclick="app.setView('shop')" class="cursor-pointer">
-                <span class="text-xl font-bold tracking-widest block uppercase">ISTANBUL</span>
-                <span class="text-[9px] font-bold text-[#D4AF37] tracking-[0.4em] uppercase">GROOMING CO.</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <button onclick="app.toggleCurrency()" id="btn-curr" class="text-[10px] font-bold border border-gray-600 px-3 py-1 rounded text-[#D4AF37]">₪ ILS</button>
-                <div class="flex bg-gray-900 rounded border border-gray-700 overflow-hidden">
-                    <button onclick="app.setLang('es')" id="l-es" class="px-2 py-1 text-[10px] font-bold bg-white text-black">ES</button>
-                    <button onclick="app.setLang('en')" id="l-en" class="px-2 py-1 text-[10px] text-gray-400">EN</button>
-                    <button onclick="app.setLang('he')" id="l-he" class="px-2 py-1 text-[10px] text-gray-400">HE</button>
-                </div>
-                <div onclick="app.toggleCart()" class="relative p-2 cursor-pointer">
-                    <i class="fa-solid fa-cart-shopping text-xl text-gray-300"></i>
-                    <span id="badge" class="absolute -top-1 -right-1 bg-[#D4AF37] text-black text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
-                </div>
-            </div>
+    <section id="productos" style="padding: 20px;">
+    <h2 style="text-align: center; color: #222; text-transform: uppercase;">Línea Nishman Professional</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+        
+        <div class="card-producto" style="border: 1px solid #eee; padding: 10px; border-radius: 8px; text-align: center; background: #fff;">
+            <img src="https://via.placeholder.com/150" alt="Cera Nishman" style="width: 100%; border-radius: 5px;">
+            <h4 style="margin: 10px 0 5px 0; font-size: 14px;">Cera Spider Nishman</h4>
+            <p style="color: #008cba; font-weight: bold; margin: 5px 0;">$15.00</p>
+            <button style="background: #000; color: #fff; border: none; padding: 8px; width: 100%; border-radius: 4px; font-size: 12px;">Añadir al Carrito</button>
         </div>
-    </nav>
 
-    <main class="pt-24 px-4 max-w-7xl mx-auto pb-32">
-        <section id="view-shop">
-            <header class="text-center py-6">
-                <h1 class="text-5xl font-bold leading-none uppercase tracking-tighter">NISHMAN & KABUTO</h1>
-                <h2 class="text-4xl font-bold katana-pulse mt-2 tracking-[0.2em] uppercase" style="font-family: 'Orbitron';">KATANA</h2>
-                <p id="txt-hero-sub" class="text-gray-400 text-[10px] uppercase tracking-widest mt-2">Distribuidor Oficial Exclusivo</p>
-                <button onclick="app.setView('b2b')" class="bg-[#D4AF37] text-black px-8 py-2.5 rounded-full font-bold uppercase text-[10px] mt-6 shadow-xl active:scale-95 transition hover:bg-white">VENTAS AL MAYOR</button>
-            </header>
+        <div class="card-producto" style="border: 1px solid #eee; padding: 10px; border-radius: 8px; text-align: center; background: #fff;">
+            <img src="https://via.placeholder.com/150" alt="Aftershave Nishman" style="width: 100%; border-radius: 5px;">
+            <h4 style="margin: 10px 0 5px 0; font-size: 14px;">Aftershave Colonia</h4>
+            <p style="color: #008cba; font-weight: bold; margin: 5px 0;">$18.00</p>
+            <button style="background: #000; color: #fff; border: none; padding: 8px; width: 100%; border-radius: 4px; font-size: 12px;">Añadir al Carrito</button>
+        </div>
 
-            <div class="mb-10">
-                <h3 id="txt-combo-title" class="text-center text-[#D4AF37] text-xs font-bold uppercase mb-4 tracking-[0.3em]">PAQUETES PROFESIONALES</h3>
-                <div id="combo-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
-            </div>
-
-            <div class="sticky top-[64px] z-40 bg-black/80 backdrop-blur-md py-3 mb-6 border-y border-white/10 overflow-x-auto no-scrollbar">
-                <div id="cats-container" class="flex gap-2 px-4 min-w-max"></div>
-            </div>
-
-            <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-        </section>
-
+    </div>
+</section>
+    
         <section id="view-b2b" class="hide py-12">
             <div class="max-w-xl mx-auto glass-card p-6 border-t-4 border-[#D4AF37]">
                 <h2 class="text-xl font-bold text-center mb-6 uppercase tracking-widest text-[#D4AF37]">ZONA DISTRIBUIDOR</h2>
